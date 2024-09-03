@@ -17,9 +17,7 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 
-app.use(cors({
-  origin: 'https://f-portfolio-two.vercel.app',
-}));
+app.use(cors());
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
